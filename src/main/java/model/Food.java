@@ -5,6 +5,8 @@ public abstract class Food implements Discountable {
     protected double price;
     protected boolean isVegetarian;
 
+    protected Food() {}
+
     public double getPrice() {
         return amount * price;
     }
