@@ -12,7 +12,7 @@ public class ShoppingCart {
     public double getPriceWithoutDiscount() {
         double total = 0;
         for (int i = 0; i < foods.length; i++) {
-            total += foods[i].getPrice();
+            total += foods[i].getCost();
         }
         return total;
     }
@@ -20,7 +20,7 @@ public class ShoppingCart {
     public double getPriceWithDiscount() {
         double total = 0;
         for (int i = 0; i < foods.length; i++) {
-            double discountedPrice = foods[i].getPrice() * (1 - foods[i].getDiscount() / 100);
+            double discountedPrice = foods[i].getCost() * (1 - foods[i].getDiscount() / 100);
             total += discountedPrice;
         }
         return total;
@@ -30,7 +30,7 @@ public class ShoppingCart {
         double total = 0;
         for (int i = 0; i < foods.length; i++) {
             if (foods[i].isVegetarian()) {
-                total += foods[i].getPrice();
+                total += foods[i].getCost();
             }
         }
         return total;

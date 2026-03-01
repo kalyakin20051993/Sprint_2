@@ -7,7 +7,7 @@ public abstract class Food implements Discountable {
 
     protected Food() {}
 
-    public double getPrice() {
+    public double getCost() {
         return amount * price;
     }
 
